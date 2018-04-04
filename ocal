@@ -1,0 +1,114 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] factoryear-api
+[INFO] factoryear-api - ejb
+[INFO] factoryear-api - web
+[INFO] factoryear-api - ear
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building factoryear-api 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ factoryear-api ---
+[INFO] 
+[INFO] >>> jboss-as-maven-plugin:7.9.Final:deploy (default-cli) > package @ factoryear-api >>>
+[INFO] 
+[INFO] <<< jboss-as-maven-plugin:7.9.Final:deploy (default-cli) < package @ factoryear-api <<<
+[INFO] 
+[INFO] --- jboss-as-maven-plugin:7.9.Final:deploy (default-cli) @ factoryear-api ---
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building factoryear-api - ejb 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ factoryear-api-ejb ---
+[INFO] Deleting C:\work\edisoft\factoryear\ejb\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ factoryear-api-ejb ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ factoryear-api-ejb ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to C:\work\edisoft\factoryear\ejb\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ factoryear-api-ejb ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ factoryear-api-ejb ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\work\edisoft\factoryear\ejb\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ factoryear-api-ejb ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-ejb-plugin:2.3:ejb (default-ejb) @ factoryear-api-ejb ---
+[INFO] Building EJB factoryear-api-ejb with EJB version 3.1
+[INFO] Building jar: C:\work\edisoft\factoryear\ejb\target\factoryear-api-ejb.jar
+[INFO] 
+[INFO] >>> jboss-as-maven-plugin:7.9.Final:deploy (default-cli) > package @ factoryear-api-ejb >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ factoryear-api-ejb ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ factoryear-api-ejb ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ factoryear-api-ejb ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ factoryear-api-ejb ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ factoryear-api-ejb ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-ejb-plugin:2.3:ejb (default-ejb) @ factoryear-api-ejb ---
+[INFO] Building EJB factoryear-api-ejb with EJB version 3.1
+[INFO] Building jar: C:\work\edisoft\factoryear\ejb\target\factoryear-api-ejb.jar
+[INFO] 
+[INFO] <<< jboss-as-maven-plugin:7.9.Final:deploy (default-cli) < package @ factoryear-api-ejb <<<
+[INFO] 
+[INFO] --- jboss-as-maven-plugin:7.9.Final:deploy (default-cli) @ factoryear-api-ejb ---
+мар 30, 2018 12:33:00 PM org.xnio.Xnio <clinit>
+INFO: XNIO Version 3.0.7.GA
+мар 30, 2018 12:33:00 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.0.7.GA
+мар 30, 2018 12:33:00 PM org.jboss.remoting3.EndpointImpl <clinit>
+INFO: JBoss Remoting version 3.2.12.GA
+мар 30, 2018 12:33:06 PM org.jboss.remoting3.remote.RemoteConnection handleException
+ERROR: JBREM000200: Remote connection failed: java.io.IOException: JBREM000202: Abrupt close on Remoting connection 00501ba6 to 127.0.0.1/127.0.0.1:9990
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] factoryear-api ..................................... SUCCESS [  2.050 s]
+[INFO] factoryear-api - ejb ............................... FAILURE [ 11.884 s]
+[INFO] factoryear-api - web ............................... SKIPPED
+[INFO] factoryear-api - ear ............................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 15.227 s
+[INFO] Finished at: 2018-03-30T12:33:06+04:00
+[INFO] Final Memory: 28M/246M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.jboss.as.plugins:jboss-as-maven-plugin:7.9.Final:deploy (default-cli) on project factoryear-api-ejb: Could not execute goal deploy on C:\work\edisoft\factoryear\ejb\target\factoryear-api-ejb.jar. Reason: I/O Error could not execute operation '{
+[ERROR] "operation" => "read-attribute",
+[ERROR] "address" => [],
+[ERROR] "name" => "launch-type"
+[ERROR] }': java.net.ConnectException: JBAS012144: Could not connect to remote://127.0.0.1:9990. The connection timed out
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <goals> -rf :factoryear-api-ejb
